@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="default" class="org.apache.log4j.ConsoleAppender">
+		<param name="target" value="System.out" />
+		<param name="encoding" value="utf-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ HH:mm:ss} %-5p [%c-%L] - %m%n" />
+		</layout>
+	</appender>
+	<!-- 输出日志到文件  每天一个文件 -->  
+    <appender name="dailyRollingFile" class="org.apache.log4j.DailyRollingFileAppender">  
+        <param name="Threshold" value="warn"></param>  
+        <param name="ImmediateFlush" value="true"></param>  
+        <param name="File" value="../rainbow-logs/rainbow-daily.log"></param>  
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH'.log'"></param>  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss\} %-5p] [%t] {%c:%L}-%m%n"></param>  
+        </layout>  
+    </appender>   
+      
+    <!-- 输出日志到文件  文件大小到达指定尺寸的时候产生一个新的文件 -->  
+    <appender name="railyFile"   
+        class="org.apache.log4j.RollingFileAppender">  
+        <param name="File" value="../rainbow-logs/rainbow-raily.log"></param>  
+        <param name="ImmediateFlush" value="true"/>  
+        <param name="Threshold" value="warn"></param>  
+        <param name="Append" value="true"></param>  
+        <param name="MaxFileSize" value="10MB"></param>  
+        <param name="MaxBackupIndex" value="100"></param>  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss\} %-5p] [%t] {%c:%L}-%m%n"></param>  
+        </layout>  
+    </appender>  
+    
+	<appender name="file_monitor_action" class="org.apache.log4j.RollingFileAppender">
+    	<param name="File" value="../rainbow-logs/access_warnning.log" />
+    	<param name="MaxFileSize" value="10240KB" />
+    	<param name="MaxBackupIndex" value="5" />
+    	<param name="encoding" value="UTF-8" />
+    	<layout class="org.apache.log4j.PatternLayout">
+      		<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p [%c-%L] - [%X{accessIp} %X{userName}] - %m%n" />
+    	</layout>
+  	</appender>
+  	<appender name="file_monitor_access" class="org.apache.log4j.RollingFileAppender">
+    	<param name="File" value="../rainbow-logs/access.log" />
+    	<param name="MaxFileSize" value="10240KB" />
+    	<param name="MaxBackupIndex" value="5" />
+    	<param name="encoding" value="UTF-8" />
+    	<layout class="org.apache.log4j.PatternLayout">
+      		<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p [%c-%L] - [%X{accessIp} %X{userName}] -%m%n" />
+    	</layout>
+  	</appender>
+  	
+     <!-- Spring 日志 -->
+    <logger name="org.springframework" additivity="false">     
+        <level value="error" />     
+        <appender-ref ref="default" />     
+    </logger>  
+    
+    <!-- com.ai 日志 -->
+    <logger name="com.bdx" additivity="false">     
+        <level value="debug" />     
+        <appender-ref ref="default" />     
+    </logger> 
+    <logger name="com.alibaba" additivity="false">     
+        <level value="debug" />     
+        <appender-ref ref="default" />     
+    </logger> 
+	<root>
+		<level value="error" />
+		<appender-ref ref="default" />
+	</root>
+</log4j:configuration>

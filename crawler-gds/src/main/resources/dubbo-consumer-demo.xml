@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+ 	 <dubbo:application name="rainbow-ydzf-consumer"  />
+   <dubbo:registry id="common" address="zookeeper://dubbo.isafefood.com:9090" timeout="30000"  check="true"/>
+   <dubbo:consumer generic="false"/>
+ 
+   <dubbo:reference interface="com.bdx.rainbow.gds.service.IHello" id="helloService" registry="common" check="true"  timeout="100000"/>  
+ 
+	
+</beans>
