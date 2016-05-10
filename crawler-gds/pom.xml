@@ -16,6 +16,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+  	<!-- spring boot web -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-tomcat</artifactId>
+		<scope>provided</scope>
+	</dependency>
     <dependency>
       <groupId>com.bdx</groupId>
       <artifactId>crawler-framework</artifactId>
