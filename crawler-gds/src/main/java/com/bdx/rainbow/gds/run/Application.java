@@ -46,7 +46,8 @@ public class Application extends WebMvcConfigurerAdapter {
 	
     public static void main(String[] args) throws IOException, Exception {
     	
-    	ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+    	SpringApplication.run(Application.class, args);
+//    	ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
     	
 //    	CrawlerConfig.ifProxy = true;
 //    	

@@ -164,11 +164,11 @@ public class GdsSupplierAnalyzer implements Analyzer {
 		return productors;
 	}
 	
-	public final static void main(String[] args) throws Exception
-	{
-		String catalogString = "巧克力|糖|核桃|瓜子|肉铺|豆腐|鱼片|饼干|薯|乐事|上好佳|曲奇|话梅|橄榄|鸡爪|矿泉水|海苔|肉松|红枣|鸭脖|牛肉|鱿鱼|白酒|红酒|啤酒|朗姆酒|黄酒|葡萄酒|西湖龙井|白茶|绿茶|大红袍|铁观音|普洱茶|玫瑰花|柠檬|芒果|果冻|菊花|红茶|咖啡|可乐|美年达|芬达|雪碧|醒目|王老吉|龟苓膏|肠|奶茶|麦片|酱油|味精|榨菜|奶粉|果汁|油|米|银耳|桂圆|香肠|木耳|菇|酱|冰激凌|水饺|馄饨|酸奶|丸|面|糖|寿司|玉米|牛排|车厘子|蛋|鸡|鸭|鱼";
-   	 	String[] catalog = catalogString.split("\\|");
-   	 	System.out.println(catalog.length);
-	}
+//	public final static void main(String[] args) throws Exception
+//	{
+//		String catalogString = "巧克力|糖|核桃|瓜子|肉铺|豆腐|鱼片|饼干|薯|乐事|上好佳|曲奇|话梅|橄榄|鸡爪|矿泉水|海苔|肉松|红枣|鸭脖|牛肉|鱿鱼|白酒|红酒|啤酒|朗姆酒|黄酒|葡萄酒|西湖龙井|白茶|绿茶|大红袍|铁观音|普洱茶|玫瑰花|柠檬|芒果|果冻|菊花|红茶|咖啡|可乐|美年达|芬达|雪碧|醒目|王老吉|龟苓膏|肠|奶茶|麦片|酱油|味精|榨菜|奶粉|果汁|油|米|银耳|桂圆|香肠|木耳|菇|酱|冰激凌|水饺|馄饨|酸奶|丸|面|糖|寿司|玉米|牛排|车厘子|蛋|鸡|鸭|鱼";
+//   	 	String[] catalog = catalogString.split("\\|");
+//   	 	System.out.println(catalog.length);
+//	}
 	
 }

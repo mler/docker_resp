@@ -47,13 +47,13 @@ public class GdsListPageSeed implements Seed {
 		return SeedType.HTTP;
 	}
 
-	public static final void main(String[] args) throws Exception
-	{
-		GdsListPageSeed seed = new GdsListPageSeed();
-		seed.setKeyword("咖啡");
-		seed.setrPage(1);
-		
-		System.out.println(seed.getUrl());
-	}
+//	public static final void main(String[] args) throws Exception
+//	{
+//		GdsListPageSeed seed = new GdsListPageSeed();
+//		seed.setKeyword("咖啡");
+//		seed.setrPage(1);
+//		
+//		System.out.println(seed.getUrl());
+//	}
 	
 }

@@ -160,24 +160,24 @@ public class GdsProductAnalyzer implements Analyzer {
 		return p;
 	}
 	
-	public final static void main(String[] args) throws Exception
-	{
-		Document doc = null;
-        Connection conn = Jsoup.connect("http://www.anccnet.com/goods.aspx?base_id=F25F56A9F703ED74A20FB650AA3F34DC51D6CAADB6F5AE9CCA3549FDA3DB9D4C0588AA1B9FC8A614");
-        conn.timeout(60000);
-        conn.header("Host", "search.anccnet.com");
-        conn.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-        conn.header("Accept-Encoding", "gzip,deflate,sdch");
-        conn.header("Proxy-Connection", "keep-alive");
-        conn.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) " +
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36");
-        conn.referrer("http://search.anccnet.com/searchResult2.aspx");
-
-        doc = conn.get();
-        
-        System.out.println(doc.html());
-        
-//        GdsProductAnalyzer._gdsAnalyzeByHtml("06943150500010", doc.html());
-        
-	}
+//	public final static void main(String[] args) throws Exception
+//	{
+//		Document doc = null;
+//        Connection conn = Jsoup.connect("http://www.anccnet.com/goods.aspx?base_id=F25F56A9F703ED74A20FB650AA3F34DC51D6CAADB6F5AE9CCA3549FDA3DB9D4C0588AA1B9FC8A614");
+//        conn.timeout(60000);
+//        conn.header("Host", "search.anccnet.com");
+//        conn.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+//        conn.header("Accept-Encoding", "gzip,deflate,sdch");
+//        conn.header("Proxy-Connection", "keep-alive");
+//        conn.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) " +
+//                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36");
+//        conn.referrer("http://search.anccnet.com/searchResult2.aspx");
+//
+//        doc = conn.get();
+//        
+//        System.out.println(doc.html());
+//        
+////        GdsProductAnalyzer._gdsAnalyzeByHtml("06943150500010", doc.html());
+//        
+//	}
 }
